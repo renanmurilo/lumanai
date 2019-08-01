@@ -1,10 +1,17 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <Posts />
+  </div>
 </template>
 
 <script>
+import Posts from "@/components/Posts.vue";
+
 export default {
-  components: {},
+  name: "home",
+  components: {
+    Posts
+  },
   created() {
     document.title = "Lumanai";
   }

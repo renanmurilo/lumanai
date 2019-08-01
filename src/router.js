@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Post from "./views/Post.vue";
+import Post from "./views/NovoPost.vue";
+import PostsItem from "./views/PostsItem.vue";
 
 Vue.use(Router);
 
@@ -15,9 +16,15 @@ export default new Router({
       component: Home
     },
     {
-      path: "/post",
-      name: "post",
+      path: "/novo-post",
+      name: "novo-post",
       component: Post
+    },
+    {
+      path: "/post/:id",
+      name: "post",
+      component: PostsItem,
+      props: true
     }
   ]
 });
